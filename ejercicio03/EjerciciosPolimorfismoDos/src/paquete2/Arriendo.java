@@ -5,24 +5,25 @@
  */
 package paquete2;
 
+import paquete4.Propietario;
+
 /**
  *
- * @author reroes
+ * @author reroesreoroeroroero
  */
 public abstract class Arriendo {
     
-    protected String nombreArrendatario;
+    protected Propietario arrendatario;
     protected double arriendoMensual;
     protected double cuotaBase;
     
-    public Arriendo(String nombre, double cuotaB){
-        // nombreArrendatario = nombre;
-        establecerNombreArrendatario(nombre);
+    public Arriendo(Propietario n, double cuotaB){
+        arrendatario = n;
         cuotaBase = cuotaB;
     }
     
-    public void establecerNombreArrendatario(String nombre){
-        nombreArrendatario = nombre;
+    public void establecerArrendatario (Propietario n){
+        arrendatario = n;
     }
     
     public void establecerCuotaBase(double x){
@@ -31,9 +32,10 @@ public abstract class Arriendo {
     
     public abstract void establecerArriendoMensual();
     
-    public String obtenerNombreArrendatario(){
-        return nombreArrendatario;
+    public Propietario obtenerArrendatario(){
+        return arrendatario;
     }
+    
     
     public double obtenerCuotaBase(){
         return cuotaBase;
@@ -41,6 +43,10 @@ public abstract class Arriendo {
     
     public double obtenerArriendoMensual(){
         return arriendoMensual;
+    }
+    
+    public Propietario obtenerPropietario(){
+        return arrendatario;
     }
     
     
